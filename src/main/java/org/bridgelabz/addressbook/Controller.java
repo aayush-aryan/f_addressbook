@@ -14,4 +14,8 @@ public class Controller {
     {
         service.update();
     }
+    public void delete()
+    {
+        service.delete();
+    }
 }

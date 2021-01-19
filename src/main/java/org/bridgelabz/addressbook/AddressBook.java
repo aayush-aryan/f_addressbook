@@ -158,6 +158,25 @@ public class AddressBook implements Service{
 
         }
     }
+    @Override
+    public void delete() {
+        String keys;
+
+        System.out.println("Enter the key");
+        keys = scanner.next();
+        fileReader();
+        List<Person> list = map.get(keys);
+
+        System.out.println("Enter the FirstName you need to delete");
+        String number = scanner.next();
+        for (int index = 0; index < list.size(); index++) {
+            if (number.equals(list.get(index).getFirstname())) {
+                list.remove(index);
+            }
+        }
+
+        fileWriter();
+    }
 
         private void fileWriter() {
             FileOutputStream fileoutputstream ;
