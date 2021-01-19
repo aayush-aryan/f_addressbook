@@ -1,0 +1,10 @@
+package org.bridgelabz.addressbook;
+
+public class Controller {
+
+    Service service = new AddressBook();
+    public void createaddressbook() {
+        service.createaddressbook();
+
+    }
+}
