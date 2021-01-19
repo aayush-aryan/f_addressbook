@@ -10,4 +10,8 @@ public class Controller {
     public void addperson() {
         service.addperson();
     }
+    public void update()
+    {
+        service.update();
+    }
 }

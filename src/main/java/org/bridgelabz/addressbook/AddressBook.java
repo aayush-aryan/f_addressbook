@@ -83,6 +83,82 @@ public class AddressBook implements Service{
 
     }
 
+    @Override
+    public void update() {
+        int ch = 0;
+        char choice;
+
+        System.out.println("LastnameEnter the Key");
+        String keys = scanner.next();
+        fileReader();
+        List<Person> a = map.get(keys);
+        System.out.println(a);
+        System.out.println("Enter the phone number for updation");
+        String phone = scanner.next();
+        for (int index = 0; index < a.size(); index++) {
+            String str = map.get(keys).get(index).getPhone();
+            if (str.equalsIgnoreCase(phone)) {
+                Person obj = map.get(keys).get(index);
+                System.out.println(" select field if yoy have to edit..!");
+                do {
+                    System.out.println("1. Change Address");
+                    System.out.println("2. Change City");
+                    System.out.println("3. Change State");
+                    System.out.println("4. Change Zipcode");
+                    System.out.println("5. change Phone Number");
+
+                    ch = scanner.nextInt();
+
+                    switch (ch) {
+                        case 1:
+                            System.out.println("Enter your Address");
+                            String address = scanner.next();
+                            obj.setAddress(address);
+                            fileWriter();
+                            System.out.println("Address Updated");
+                            break;
+                        case 2:
+                            System.out.println("Enter your City ");
+                            String city = scanner.next();
+                            obj.setCity(city);
+                            fileWriter();
+                            System.out.println("City Updated");
+                            break;
+                        case 3:
+                            System.out.println("Enter your State");
+                            String state = scanner.next();
+                            obj.setState(state);
+                            fileWriter();
+                            System.out.println("State Updated");
+                            break;
+                        case 4:
+                            System.out.println("Enter Your Zipcode");
+                            String zipcode = scanner.next();
+                            obj.setZip(zipcode);
+                            fileWriter();
+                            System.out.println("Zipcode Updated");
+                            break;
+                        case 5:
+                            System.out.println("Enter Phone Number");
+                            String phone1 = scanner.next();
+                            obj.setPhone(phone1);
+                            fileWriter();
+                            System.out.println("Phone Number Updated");
+                            break;
+
+                    }
+
+                    System.out.println("Do You want to continue");
+                    choice = scanner.next().charAt(0);
+
+                } while (choice == 'Y' || choice == 'y');
+            } else {
+                System.out.println("Contact doesn't exist");
+            }
+
+        }
+    }
+
         private void fileWriter() {
             FileOutputStream fileoutputstream ;
             try {

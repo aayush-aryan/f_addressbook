@@ -12,6 +12,7 @@ public class AddressBookMain {
         do {
             System.out.println("For Creating  Address Book press :1 ");
             System.out.println("For adding person press :2");
+            System.out.println("For updating press :3");
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -21,7 +22,10 @@ public class AddressBookMain {
                 case 2:
                     controller.addperson();
                     break;
-            }
-        }while(choice !=2);
+            case 3:
+                controller.update();
+                break;
+        }
+        }while(choice !=3);
     }
 }
