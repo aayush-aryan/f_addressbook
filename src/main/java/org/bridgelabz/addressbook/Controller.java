@@ -7,4 +7,7 @@ public class Controller {
         service.createaddressbook();
 
     }
+    public void addperson() {
+        service.addperson();
+    }
 }
