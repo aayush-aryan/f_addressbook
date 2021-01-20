@@ -143,7 +143,7 @@ public class AddressBook implements Service{
                             String phone1 = scanner.next();
                             obj.setPhone(phone1);
                             fileWriter();
-                            System.out.println("Phone Number Updated");
+                            System.out.println("PhoneNumber updated");
                             break;
 
                     }
@@ -161,7 +161,6 @@ public class AddressBook implements Service{
     @Override
     public void delete() {
         String keys;
-
         System.out.println("Enter the key");
         keys = scanner.next();
         fileReader();
