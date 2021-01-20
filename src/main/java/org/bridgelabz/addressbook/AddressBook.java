@@ -148,7 +148,7 @@ public class AddressBook implements Service{
 
                     }
 
-                    System.out.println("Do You want to continue");
+                    System.out.println("Do you want to continue :");
                     choice = scanner.next().charAt(0);
 
                 } while (choice == 'Y' || choice == 'y');
