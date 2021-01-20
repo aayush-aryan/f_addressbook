@@ -18,4 +18,7 @@ public class Controller {
     {
         service.delete();
     }
+    public void addingMultiplePerson() {
+        service.addingMultiplePerson();
+    }
 }

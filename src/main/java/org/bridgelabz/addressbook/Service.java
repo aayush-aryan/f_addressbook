@@ -5,4 +5,5 @@ public interface Service {
     void addperson();
     void update();
     void delete();
+    void addingMultiplePerson();
 }

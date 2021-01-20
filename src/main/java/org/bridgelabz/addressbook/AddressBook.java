@@ -177,6 +177,15 @@ public class AddressBook implements Service{
 
         fileWriter();
     }
+    @Override
+    public void addingMultiplePerson() {
+        System.out.println("enter the number of Person you have to add in addressBooK");
+        int numberOfPerson = scanner.nextInt();
+        for(int index=0;index < numberOfPerson;index++){
+            addperson();
+        }
+
+    }
 
         private void fileWriter() {
             FileOutputStream fileoutputstream ;

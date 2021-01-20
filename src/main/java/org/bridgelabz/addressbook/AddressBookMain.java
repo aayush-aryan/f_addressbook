@@ -14,6 +14,7 @@ public class AddressBookMain {
             System.out.println("For adding person press :2");
             System.out.println("For updating press :3");
             System.out.println("For deleting existing person by using FirstName press:4");
+            System.out.println("For adding multiple Person in addressBook press : 5");
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -29,8 +30,11 @@ public class AddressBookMain {
                 case 4:
                     controller.delete();
                     break;
+                case 5:
+                    controller.addingMultiplePerson();
+                    break;
             }
 
-        }while(choice !=5);
+        }while(choice !=6);
     }
 }
