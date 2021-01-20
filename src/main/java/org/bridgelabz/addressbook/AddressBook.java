@@ -202,6 +202,28 @@ public class AddressBook implements Service{
             System.out.println("Record  Not Found");
         }
     }
+    @Override
+    public void viewByCity() {
+        fileReader();
+        {
+            for (int select = 0; select < numberofaddressbook; select++) {
+                System.out.println(select + " " + addressbook[select]);
+            }
+
+            System.out.println("Please Select Your address book");
+            int select = scanner.nextInt();
+            Object keys = addressbook[select];
+            List<Person> arraylist = map.get(keys);
+            Collections.sort(arraylist, Person.sortbyCity);
+            fileWriter();
+            for (Person personList : arraylist)
+
+            {
+                System.out.println(personList);
+            }
+
+        }
+    }
 
 
         private void fileWriter() {

@@ -24,4 +24,7 @@ public class Controller {
     public void search() {
         service.search();
     }
+    public void viewByCity() {
+        service.viewByCity();
+    }
 }

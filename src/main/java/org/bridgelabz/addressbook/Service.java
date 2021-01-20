@@ -7,4 +7,5 @@ public interface Service {
     void delete();
     void addingMultiplePerson();
     void search();
+    void viewByCity();
 }
