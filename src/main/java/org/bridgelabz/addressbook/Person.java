@@ -1,6 +1,7 @@
 package org.bridgelabz.addressbook;
 
 import java.io.Serializable;
+import java.util.Comparator;
 
 public class Person implements Serializable {
     private String firstname;
@@ -78,5 +79,29 @@ public class Person implements Serializable {
                 ", zip='" + zip + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
+    }
+
+    public static Comparator<Person> sortbyname;
+
+    static {
+        sortbyname = (person1, person2) -> {
+            String FirstName1 = person1.getLastname();
+            String FirstName2 = person2.getLastname();
+
+            return FirstName1.compareTo(FirstName2);
+
+        };
+    }
+
+    public static Comparator<Person> sortbyCity;
+
+    static {
+        sortbyCity = (person1, person2) -> {
+            String FirstName1 = person1.getCity();
+            String FirstName2 = person2.getCity();
+
+            return FirstName1.compareTo(FirstName2);
+
+        };
     }
 }

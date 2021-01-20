@@ -185,6 +185,24 @@ public class AddressBook implements Service{
         }
 
     }
+    @Override
+    public void search() {
+        System.out.println("Enter the key");
+        String keyValue = scanner.next();
+        fileReader();
+        List<Person> a = map.get(keyValue);
+        System.out.println("Enter the First name you want to search");
+        String name = scanner.next();
+        for (int index = 0; index < a.size(); index++) {
+            String city = map.get(keyValue).get(index).getCity();
+            if (city.equalsIgnoreCase(name)) {
+                System.out.println(map.get(keyValue).get(index));
+                return;
+            }
+            System.out.println("Record  Not Found");
+        }
+    }
+
 
         private void fileWriter() {
             FileOutputStream fileoutputstream ;

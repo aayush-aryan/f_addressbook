@@ -6,4 +6,5 @@ public interface Service {
     void update();
     void delete();
     void addingMultiplePerson();
+    void search();
 }

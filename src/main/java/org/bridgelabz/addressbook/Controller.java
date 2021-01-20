@@ -21,4 +21,7 @@ public class Controller {
     public void addingMultiplePerson() {
         service.addingMultiplePerson();
     }
+    public void search() {
+        service.search();
+    }
 }
