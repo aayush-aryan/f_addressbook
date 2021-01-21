@@ -27,4 +27,7 @@ public class Controller {
     public void viewByCity() {
         service.viewByCity();
     }
+    public void sortByName() {
+        service.sortByName();
+    }
 }

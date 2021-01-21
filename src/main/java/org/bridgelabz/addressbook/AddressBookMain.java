@@ -17,6 +17,8 @@ public class AddressBookMain {
             System.out.println("For adding multiple Person in addressBook press : 5");
             System.out.println("For searching Person by city presss : 6");
             System.out.println(" For view person city press : 7 ");
+            System.out.println("For sorting person by Name press : 8");
+
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -41,9 +43,12 @@ public class AddressBookMain {
                 case 7:
                     controller.viewByCity();
                     break;
+                case 8:
+                    controller.sortByName();
+                    break;
 
             }
 
-        }while(choice !=8);
+        }while(choice !=9);
     }
 }

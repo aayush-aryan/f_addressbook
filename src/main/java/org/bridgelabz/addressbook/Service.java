@@ -8,4 +8,5 @@ public interface Service {
     void addingMultiplePerson();
     void search();
     void viewByCity();
+    void sortByName();
 }
