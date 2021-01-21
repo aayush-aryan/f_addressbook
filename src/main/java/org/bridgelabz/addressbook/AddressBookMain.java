@@ -18,6 +18,7 @@ public class AddressBookMain {
             System.out.println("For searching Person by city presss : 6");
             System.out.println(" For view person city press : 7 ");
             System.out.println("For sorting person by Name press : 8");
+            System.out.println("For sorting person by zipCode press : 9");
 
             choice = scanner.nextInt();
 
@@ -45,6 +46,9 @@ public class AddressBookMain {
                     break;
                 case 8:
                     controller.sortByName();
+                    break;
+                case 9:
+                    controller.sortByZip();
                     break;
 
             }

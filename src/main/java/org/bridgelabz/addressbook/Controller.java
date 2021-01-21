@@ -30,4 +30,8 @@ public class Controller {
     public void sortByName() {
         service.sortByName();
     }
+
+    public void sortByZip() {
+        service.sortByZip();
+    }
 }

@@ -9,4 +9,5 @@ public interface Service {
     void search();
     void viewByCity();
     void sortByName();
+    void sortByZip();
 }
